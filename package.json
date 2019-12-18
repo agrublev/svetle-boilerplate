@@ -29,7 +29,8 @@
         "svelte-preprocess-less": "^0.4.0",
         "webpack": "^4.30.0",
         "webpack-cli": "^3.3.0",
-        "webpack-dev-server": "^3.3.1"
+        "webpack-dev-server": "^3.3.1",
+        "html-webpack-plugin": "latest"
     },
     "dependencies": {}
 }

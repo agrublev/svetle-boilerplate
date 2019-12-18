@@ -1,0 +1,19 @@
+{
+  "jumpToAliasFile.alias": {
+    "svelte": "/Users/me3n/WebstormProjects/SVELTE/node_modules/svelte"
+  },
+  "workbench.colorCustomizations": {
+    "list.activeSelectionForeground": "#388E3C",
+    "list.inactiveSelectionForeground": "#388E3C",
+    "list.highlightForeground": "#388E3C",
+    "scrollbarSlider.activeBackground": "#388E3C50",
+    "editorSuggestWidget.highlightForeground": "#388E3C",
+    "textLink.foreground": "#388E3C",
+    "progressBar.background": "#388E3C",
+    "pickerGroup.foreground": "#388E3C",
+    "notificationLink.foreground": "#388E3C",
+    "editor.findWidgetResizeBorder": "#388E3C",
+    "editorWidget.border": "#388E3C",
+    "tab.unfocusedActiveBorder": "#fff0"
+  }
+}
