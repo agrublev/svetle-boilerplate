@@ -6,7 +6,6 @@
 <script>
     import { name } from "./store.js";
     import { createEventDispatcher, onDestroy } from "svelte";
-
     const dispatch = createEventDispatcher();
     const crazy = () => dispatch("crazy");
     let count = 0;

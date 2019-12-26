@@ -7,13 +7,14 @@
         }
 
         background-color: @green;
-        font-family:"Comic Sans MS", "Adobe Clean", sans-serif;
+        font-family: "Comic Sans MS", "Adobe Clean", sans-serif;
     }
 </style>
 
 <script>
     import Editor from "./Editor.svelte";
     import Button from "./Button.svelte";
+    import Markd from "./Test.md";
 
     import "./test.less";
     import { name, nameWithTime, elapsed } from "./store.js";
@@ -26,5 +27,8 @@
 </script>
 
 <main>
+    <Markd />
+
+    <h2>Editor</h2>
     <Editor />
 </main>
