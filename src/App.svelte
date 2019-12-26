@@ -1,9 +1,11 @@
 <style lang="less" type="text/less">
     @green: orange;
+
     main {
         h1 {
             background: purple;
         }
+
         background-color: @green;
         font-family: "Adobe Clean", sans-serif;
     }
@@ -12,9 +14,13 @@
 <script>
     import Editor from "./Editor.svelte";
     import Button from "./Button.svelte";
+    import MyElement from "./CustomElement.svelte";
+
     import "./test.less";
     import { name, nameWithTime, elapsed } from "./store.js";
     import { beforeUpdate, afterUpdate } from "svelte";
+
+    // customElements.define("my-element", MyElement);
 
     let height = 55;
     beforeUpdate(() => {

@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>AWESOME SVET:E<</title>
-  <link href="bundle.css" rel="stylesheet"></head>
-  <body>
-  <script type="text/javascript" src="bundle.js"></script></body>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="bundle.css" rel="stylesheet" />
+        <style>
+            header {
+                background: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header><h1 id="logo">Hello</h1></header>
+        <div id="injected"></div>
+        <script type="text/javascript" src="bundle.js"></script>
+        <my-element>
+            <h2 slot="footer">TEst 1</h2>
+            <h1 slot="header">Hello</h1>
+        </my-element>
+    </body>
 </html>
