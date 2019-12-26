@@ -1,6 +1,5 @@
 <style type="text/less" lang="less">
     .wrap-editor {
-        display: none;
     }
 </style>
 

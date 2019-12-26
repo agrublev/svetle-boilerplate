@@ -7,20 +7,17 @@
         }
 
         background-color: @green;
-        font-family: "Adobe Clean", sans-serif;
+        font-family:"Comic Sans MS", "Adobe Clean", sans-serif;
     }
 </style>
 
 <script>
     import Editor from "./Editor.svelte";
     import Button from "./Button.svelte";
-    import MyElement from "./CustomElement.svelte";
 
     import "./test.less";
     import { name, nameWithTime, elapsed } from "./store.js";
     import { beforeUpdate, afterUpdate } from "svelte";
-
-    // customElements.define("my-element", MyElement);
 
     let height = 55;
     beforeUpdate(() => {

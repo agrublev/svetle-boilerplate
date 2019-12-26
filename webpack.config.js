@@ -69,7 +69,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./public/index.html",
-            title: "AWESOME SVETLE 52"
+            title: "AWESOME SVETLE"
         })
     ],
     devtool: prod ? false : "source-map"
