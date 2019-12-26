@@ -1,17 +1,20 @@
 <style lang="less" type="text/less">
     @green: orange;
+
     main {
         h1 {
             background: purple;
         }
+
         background-color: @green;
-        font-family: "Adobe Clean", sans-serif;
+        font-family:"Comic Sans MS", "Adobe Clean", sans-serif;
     }
 </style>
 
 <script>
     import Editor from "./Editor.svelte";
     import Button from "./Button.svelte";
+
     import "./test.less";
     import { name, nameWithTime, elapsed } from "./store.js";
     import { beforeUpdate, afterUpdate } from "svelte";

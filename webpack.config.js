@@ -68,7 +68,8 @@ module.exports = {
             filename: "[name].css"
         }),
         new HtmlWebpackPlugin({
-            title: "AWESOME SVET:E<"
+            template: "./public/index.html",
+            title: "AWESOME SVETLE"
         })
     ],
     devtool: prod ? false : "source-map"
