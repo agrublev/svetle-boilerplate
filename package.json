@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack",
-        "start": "webpack-dev-server --content-base public"
+        "start": "webpack-dev-server --port 5000 --content-base public"
     },
     "author": "agrublev",
     "license": "MIT",
@@ -13,10 +13,19 @@
         "@babel/cli": "^7.7.5",
         "@babel/core": "^7.7.5",
         "@babel/preset-env": "^7.7.6",
+        "concurrently": "^4.1.1",
         "cross-env": "^6.0.3",
         "css-loader": "^2.1.1",
+        "downloadjs": "^1.4.7",
         "eslint": "^6.7.2",
         "eslint-plugin-svelte3": "^2.7.3",
+        "express": "latest",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-better-rollup": "^4.0.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-replace": "^1.0.0",
+        "gulp-sass": "^4.0.2",
         "html-webpack-plugin": "latest",
         "less": "^3.10.3",
         "less-loader": "^5.0.0",
@@ -24,14 +33,20 @@
         "prettier": "^1.19.1",
         "prettier-plugin-svelte": "^0.7.0",
         "serve": "^11.0.0",
+        "socket.io": "^2.3.0",
+        "socket.io-client": "latest",
+        "socket.io-p2p": "^2.2.0",
+        "socket.io-p2p-server": "^1.2.0",
         "style-loader": "^0.23.1",
         "svelte": "^3.16.5",
         "svelte-loader": "2.13.3",
         "svelte-preprocess": "^3.2.6",
         "svelte-preprocess-less": "^0.4.0",
+        "svelte-routing": "^1.4.1",
         "webpack": "^4.30.0",
         "webpack-cli": "^3.3.0",
-        "webpack-dev-server": "^3.3.1"
+        "webpack-dev-server": "^3.3.1",
+        "workbox-build": "^4.3.1"
     },
     "dependencies": {}
 }

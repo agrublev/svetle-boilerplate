@@ -7,12 +7,14 @@
         }
 
         background-color: @green;
-        font-family:"Comic Sans MS", "Adobe Clean", sans-serif;
+        font-family: "Comic Sans MS", "Adobe Clean", sans-serif;
     }
 </style>
 
 <script>
     import Editor from "./Editor.svelte";
+    import Weather from "./weather/App.svelte";
+    import Share from "./share/App.svelte";
     import Button from "./Button.svelte";
 
     import "./test.less";
@@ -26,5 +28,5 @@
 </script>
 
 <main>
-    <Editor />
+    <Share />
 </main>
