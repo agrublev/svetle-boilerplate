@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FArk.iml" filepath="$PROJECT_DIR$/.idea/FArk.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/socket.io-p2p-master/.idea/socket.io-p2p-master.iml" filepath="$USER_HOME$/Documents/socket.io-p2p-master/.idea/socket.io-p2p-master.iml" />
     </modules>
   </component>
 </project>

@@ -19,6 +19,7 @@ module.exports = {
     },
     output: {
         path: __dirname + "/dist",
+        publicPath: "/",
         filename: "[name].js",
         chunkFilename: "[name].[id].js"
     },
@@ -62,9 +63,16 @@ module.exports = {
             }
         ]
     },
-    // devServer: {
-    //     port: 5000
-    // },
+    devServer: {
+        port: 5000,
+        historyApiFallback: true,
+        contentBase: "./public",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+            "Access-Control-Allow-Headers": "*"
+        }
+    },
     mode,
     plugins: [
         new MiniCssExtractPlugin({

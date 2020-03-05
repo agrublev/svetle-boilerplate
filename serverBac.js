@@ -32,7 +32,7 @@ function emitUsrsList(room) {
 
 app.use(express.static("dist"));
 app.use("/app(/*)?", (req, res) => {
-    res.sendFile(__dirname + "/dist/index.html");
+    res.sendFile(__dirname + "/dist/app.html");
 });
 
 let clients = {};
@@ -92,6 +92,44 @@ io.on("connection", socket => {
 });
 
 let port = process.env.PORT ? process.env.PORT : 3030;
+app.use((req, res, next) => {
+    if (req.secure) {
+        next();
+    } else {
+        res.redirect("https://" + req.headers.host + req.url);
+    }
+});
+
+http.on("request", function(req, res) {
+    // const { html } = app.render({ url: req.url });
+    if (!req.url.includes(".js")) {
+        res.write(`
+    <!DOCTYPE html>
+<html><head>
+        <title>AWESOME SVETLE</title>
+        <meta charset="UTF-8">
+
+        <script defer="" src="./socket.io.js"></script>
+        <script defer="" src="./socketiop2p.min.js"></script>
+        <script defer="" src="https://unpkg.com/canvas-elements/build/cdn/canvas-elements.min.js"></script>
+    <link href="/bundle.css" rel="stylesheet"><style type="text/css">body {
+  background: gray !important;
+  text-align: left !important;
+}
+.heightAdjust {
+  transition: all 0.5s linear;
+}
+</style></head>
+
+    <body>
+        <div id="injected"></div>
+    <script type="text/javascript" src="/bundle.js"></script>
+</body></html>
+  `);
+    }
+
+    res.end();
+});
 http.listen(port, () => {
     log("listening on *:" + port);
 });
@@ -99,11 +137,4 @@ http.listen(port, () => {
 if (process.env.NODE_ENV === "production") {
     // Redirect http to https
     app.enable("trust proxy");
-    app.use((req, res, next) => {
-        if (req.secure) {
-            next();
-        } else {
-            res.redirect("https://" + req.headers.host + req.url);
-        }
-    });
 }

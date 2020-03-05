@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack",
-        "start": "webpack-dev-server --port 5000 --content-base public"
+        "start": "webpack-dev-server"
     },
     "author": "agrublev",
     "license": "MIT",
